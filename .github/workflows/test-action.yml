@@ -1,0 +1,23 @@
+name: Twst action
+
+on:
+  workflow_dispatch:
+    inputs:
+      input1:
+        description: 'First input value'
+        required: true
+        default: 'default-value-1'
+      input2:
+        description: 'Second input value'
+        required: false
+        default: 'default-value-2'
+
+jobs:
+  print-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: LS
+        run: ls
+
+      - name: Use SingingStage/identify-workflow
+        uses: ./

@@ -1,0 +1,5 @@
+name: Identify Workflow
+description: A matching actions for run-workflow intended to identify it's specific run
+runs:
+  using: "node20"
+  main: "dist/index.js"
