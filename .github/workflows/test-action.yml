@@ -1,11 +1,14 @@
-name: Twst action
+name: Test action
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       input1:
         description: 'First input value'
-        required: true
+        required: false
         default: 'default-value-1'
       input2:
         description: 'Second input value'
