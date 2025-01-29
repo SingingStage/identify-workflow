@@ -1,0 +1,17 @@
+name: Called Workflow
+
+on:
+   workflow_call:
+    inputs:
+      uuid:
+        type: string
+        required: true
+
+jobs:
+  print-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Use current action
+        uses: ./
