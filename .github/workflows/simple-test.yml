@@ -1,9 +1,6 @@
 name: Test action
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       input1:
