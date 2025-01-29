@@ -32,18 +32,10 @@ jobs:
 | Input       | Description                                  | Required |
 |------------|--------------------------------|----------|
 | `token`    | GitHub token with repo access. | ✅ |
-| `debug`    | Enable debug logging (`true/false`). | ❌ |
 
-## Outputs
-| Output       | Description |
-|-------------|-------------|
-| `workflow_id` | The ID of the triggered workflow. |
-| `run_id` | The unique run identifier. |
-| `event_name` | The name of the triggering event. |
 
 ## Example Use Cases
 - Identifying workflows triggered by `dispatch-workflow`.
-- Logging additional debugging information in workflows.
 - Ensuring correct workflow execution flow.
 
 ## License
