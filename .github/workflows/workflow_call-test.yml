@@ -1,11 +1,10 @@
 name: Workflow Call Test
-
 on:
   push:
     branches:
       - main
 jobs:
-  test-workflow_call:
-uses: ./.github/workflows/called-workflow.yml
-with:
-  uuid: 123
+  workflow_call-test:
+    uses: ./.github/workflows/called-workflow.yml
+    with:
+      uuid: 123
