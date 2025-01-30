@@ -19,10 +19,11 @@ jobs:
           uuid: ${{ inputs.uuid }}
 
   debug:
-    env:
-      UUID: ${{ inputs.uuid }}  # ✅ Pass input explicitly as an environment variable
+    
     runs-on: ubuntu-latest
     steps:
       - name: Log inputs manually
+        env:
+      UUID: ${{ inputs.uuid }}  # ✅ Pass input explicitly as an environment variable
         shell: bash
         run: echo "UUID: $UUID"  # ✅ Use environment variable
