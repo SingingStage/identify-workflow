@@ -3,16 +3,9 @@ on:
   push:
     branches:
       - main
+
 jobs:
   workflow_call-test:
     uses: ./.github/workflows/called-workflow.yml
     with:
-      uuid: 123
-
-  debug:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Log inputs manually:
-      shell: bash
-      run: echo "UUID: ${{ inputs.uuid }}"
-  
+      uuid: "123"  # Ensure the value is a string
