@@ -11,7 +11,6 @@
     "@vercel/ncc": "^0.36.1"
   },
   "scripts": {
-    "build": "ncc build index.js",
-    "debug": "ncc build debug.js"
+    "build": "npm install && ncc build index.js -o dist && rmdir /s /q node_modules && del package-lock.json"
   }
 }
