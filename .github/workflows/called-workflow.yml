@@ -16,7 +16,81 @@ jobs:
       - name: Use current action
         uses: ./
         with:
-          parameters: ${{ inputs.parameters }}
+          parameters: "{${{ inputs.uuid }}}
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          "
 
   debug:
     runs-on: ubuntu-latest
