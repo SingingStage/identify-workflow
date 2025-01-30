@@ -3,7 +3,7 @@ name: Called Workflow
 on:
   workflow_call:
     inputs:
-      parameters:
+      uuid:
         type: string
         required: true
 
