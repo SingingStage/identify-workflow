@@ -27567,7 +27567,16 @@ async function run() {
 
     inputNames.forEach((envVar) => {
       const inputName = envVar.replace('INPUT_', '').toLowerCase(); // Convert to lowercase
-      inputs[inputName] = process.env[envVar];
+      let value = process.env[envVar];
+
+      // Attempt to parse JSON inputs if applicable
+      try {
+        value = JSON.parse(value);
+      } catch (error) {
+        // Keep value as string if not valid JSON
+      }
+
+      inputs[inputName] = value;
     });
 
     if (Object.keys(inputs).length === 0) {
@@ -27576,12 +27585,16 @@ async function run() {
     }
 
     // Print each input
-    console.log('Workflow inputs:');
-    for (const [key, value] of Object.entries(inputs)) {
-      console.log(`${key}: ${value}`);
-    }
+    console.log('Workflow Inputs:');
+    Object.entries(inputs).forEach(([key, value]) => {
+      console.log(`${key}: ${typeof value === 'object' ? JSON.stringify(value, null, 2) : value}`);
+    });
+
+    // Optionally, set output for downstream steps
+    core.setOutput('parsedInputs', JSON.stringify(inputs));
+
   } catch (error) {
-    core.setFailed(error.message);
+    core.setFailed(`Error processing inputs: ${error.message}`);
   }
 }
 

@@ -1,5 +1,10 @@
 name: Identify Workflow
-description: A matching actions for run-workflow intended to identify it's specific run
+description: A matching action for run-workflow intended to identify its specific run
+inputs:
+  parameters:
+    description: "JSON object containing multiple parameters"
+    required: false
+    default: "{}"
 runs:
   using: "node20"
   main: "dist/index.js"
