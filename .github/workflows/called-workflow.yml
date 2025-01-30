@@ -25,4 +25,4 @@ jobs:
     steps:
       - name: Log inputs manually
         shell: bash
-        run: echo "UUID: ${{ inputs.uuid }}"
+        run: echo "UUID: $UUID"  # ✅ Use environment variable
