@@ -13,7 +13,4 @@ jobs:
       - name: Use current action
         uses: ./
         with:
-          parameters:
-            a: A
-            b: B
-        
+          uuid: '1'
