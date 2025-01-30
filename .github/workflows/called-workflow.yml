@@ -16,7 +16,7 @@ jobs:
       - name: Use current action
         uses: ./
         with:
-          parameters: "{${{ inputs.uuid }}}
+          parameters: "{${{ inputs }}}
           
           
           
