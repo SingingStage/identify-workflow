@@ -8,4 +8,4 @@ jobs:
   workflow_call-test:
     uses: ./.github/workflows/called-workflow.yml
     with:
-      uuid: "123"  # Ensure the value is a string
+      parameters: ${{ github.event.inputs.parameters }}
