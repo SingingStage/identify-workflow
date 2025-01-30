@@ -3,7 +3,7 @@ name: Called Workflow
 on:
   workflow_call:
     inputs:
-      uuid:
+      parameters:
         type: string
         required: true
 
@@ -16,12 +16,12 @@ jobs:
       - name: Use current action
         uses: ./
         with:
-          uuid: ${{ inputs.uuid }}
+          parameters: ${{ inputs.parameters }}
 
   debug:
     runs-on: ubuntu-latest
     steps:
       - name: Log inputs manually
         env:
-          UUID: ${{ inputs.uuid }}  # ✅ Properly defined under steps
-        run: echo "$UUID"
+          P: ${{ inputs.parameters }}  # ✅ Properly defined under steps
+        run: echo "$P"
