@@ -13,6 +13,7 @@ jobs:
       - name: Use current action
         uses: ./
         with:
-          a: A,
-          b: B
+          parameters:
+            a: A
+            b: B
         
