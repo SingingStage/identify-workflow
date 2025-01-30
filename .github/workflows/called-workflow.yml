@@ -23,6 +23,5 @@ jobs:
     steps:
       - name: Log inputs manually
         env:
-          UUID: ${{ inputs.uuid }}  # ✅ Move `env:` inside the step
-        shell: bash
-        run: echo "UUID: $UUID"  # ✅ Correctly reference the environment variable
+          UUID: ${{ inputs.uuid }}  # ✅ Properly defined under steps
+        run: echo "UUID: $UUID"
