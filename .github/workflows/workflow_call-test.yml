@@ -6,6 +6,7 @@ on:
 
 jobs:
   workflow_call-test:
+  
     uses: ./.github/workflows/called-workflow.yml
     with:
       uuid: '123'

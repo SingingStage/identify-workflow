@@ -1,4 +1,4 @@
-name: Test Workflow Dispatch
+name: Test Workflow Push
 
 on:
   push:

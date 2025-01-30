@@ -13,9 +13,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Use current action
-        uses: ./
-        
+      - name: PWD
+        run: pwd
+      - name: LS
+        run: ls        
           
           
           
