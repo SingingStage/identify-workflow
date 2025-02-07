@@ -16,4 +16,4 @@ jobs:
       - name: Use current action
         uses: ./
         with:
-          uuid: '123'
+          uuid: ${{inputs.uuid}}
